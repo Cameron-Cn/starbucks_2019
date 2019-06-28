@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>Positive Impact of Coffee in our Society</h2>
+	  <h2>By Gonzalo Orellana</h2>      
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Coffee Origins</h2>
+      <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560535497/history_of_coffee_in_ethiopia_mtqvyw.jpg" alt=":)" width="270" height="270" id="wpstats">
+      <p>Some History</p>
+		<ul>
+			<li>Coffee: is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.
+			<li>850 AD Started in Abyssinia, now Ethiopia the original home of the coffee (arabica)
+			<li>1414 introduced to Mecca, Medina, Yemen, Cairo, Damascus, Constantinopla
+			<li>1554 Ottoman Empire
+			<li>1565 Europe
+			<li>1720 Americas
+
+   </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2018 World production by Country</h2>
+      <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560541798/2018countries2_hx3jlw.png" alt=":)" width="450" height="450" id="wpstats">
+      <p>Coffee production worldwide in 2018, by country (in 1,000 60 kilogram bags).</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2018 Coffee Quick Facts</h2>
+	  <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560536570/coffee_IMPACT_infographic_thumb_kskeat.png" alt=":)" width="350" height="750" id="wpstats">
+      <p>
+		<ul>
+			<li>The total economic impact of the coffee industry in the United States in 2018 was $225.2 billion
+			<li>Coffee-related economic activity comprises approximately 1.6% of the total U.S. gross domestic product
+			<li>Consumers spent $74.2 billion on coffee in 2018
+			<li>The coffee industry is responsible for 1,694,710 jobs in the US economy
+			<li>The coffee industry generates nearly $28 billion in taxes (including ancillary goods)
+			<li>2nd Most Popular drink after water
+			<li>1600 million cups a day
+			<li>250 cups sold per day per store
+	</p>	
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Case Study: Starbucks Coffee Shops</h2>
+      <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560543838/starbucksupto2018_cig2s3.png" alt=":)" width="370" height="270" id="wpstats">
+      <p>
+		<ul>
+			<li>Started in 1971, Pike Place Market. Seatle, WA
+			<li>Since 1987, Starbucks has added an average of 2 stores a day.
+			<li>Santa Fe Springs, CA has the highest concentration of store locations with 560 Starbucks in a 25 mile radius
+			<li> Within the past ten years Starbucks has been expanding globally with more than 17,000 stores worldwide throughout 55 different countries. The very successful company has had a great revenue increase of 9.90 percent
+			<li>There are more than 300,000+ Starbucks Employees in the world, of those, 191,000 are in US, creating a positive impact on the country’s GDP, making their economy better and healthier. 
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Starbucks Stores By Country</h2>
+      <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560545699/starbuckstoresworld_gq8307.png" alt=":)" width="450" height="300" id="wpstats">
+      <p>Starbucks Presence 2018</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Coffee and Health</h2>
+	  <a name="coffee">
+      <img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560780291/caffiene_graph_zwm43q.jpg" alt=":)" width="450" height="300" id="wpstats">
+      <p>
+		<ul>
+			<li>Lowered risk of Alzheimer's disease by 65%
+			<li>May lower the risk of colon, mouth and other cancers
+			<li>May increase acid reflux
+			<li>May Increase heart beat and alertness 
+			<li>
+		</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+		<img src="https://res.cloudinary.com/montgomerycollege/image/upload/v1560780974/cup_xqj66s.jpg" alt=":)" width="470" height="270" id="wpstats">
+      <p>References:
+	  <ul>
+			<li>International Coffee Organization
+			<li>http://www.ico.org/
+			<li>www.Statista.com
+			<li>http://www.e-importz.com/coffee-statistics.php
+			<li>https://www.kaggle.com/starbucks/store-locations
+			<li>https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/coffee-and-health/faq-20058339
+	   </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
