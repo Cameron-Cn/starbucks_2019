@@ -10,4 +10,14 @@ Remote  GitHub Location: https://github.com/Cameron-Cn/starbucks_2019
 
 ---
 
+### External Sources: { &#9982; } 
 
++
++
++
++
++
+
+
+---
+---
