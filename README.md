@@ -13,9 +13,9 @@ Remote  GitHub Location: https://github.com/Cameron-Cn/starbucks_2019
 ### External Sources: { &#9982; } 
 
 + Starbucks - SEC Filing: https://www.sec.gov/Archives/edgar/data/829224/000082922417000049/sbux-1012017x10xk.htm#s3ED8F783F0C45891AFF320FFCD9CDD48
-+
-NASDAQ on The Wall Street Journal
-+https://quotes.wsj.com/SBUX
+
++ NASDAQ on The Wall Street Journal | https://quotes.wsj.com/SBUX
+
 +
 +
 
